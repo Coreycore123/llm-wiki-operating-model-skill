@@ -1,0 +1,5 @@
+interface:
+  display_name: "LLM Wiki Operating Model"
+  short_description: "Maintain a file-based knowledge base as a compounding AI wiki."
+  default_prompt: "Use $llm-wiki-operating-model to ingest, query, lint, or organize this Markdown knowledge base with raw sources, wiki index/log files, and reusable judgments."
+
