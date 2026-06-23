@@ -6,7 +6,7 @@ Use this when the user asks to record a high-value POV, save a reusable judgment
 
 Use `wiki/log.md` as the canonical record unless the user's workspace explicitly uses another file.
 
-Avoid creating a separate POV archive unless the workspace already has one and the user wants it preserved.
+Avoid creating a separate POV archive unless the workspace already has one and the user wants it preserved. If a workspace has a legacy compatibility page such as `02方法论沉淀/00High Value POV.md`, keep `wiki/log.md` canonical and treat the legacy page as a compatibility entrypoint.
 
 ## Qualification standard
 
@@ -25,6 +25,7 @@ Do not record:
 - untested guesses
 - ordinary summaries
 - observations that only apply to one source
+- wording that is useful only as copy but does not explain a class of decisions
 
 ## Entry format
 
@@ -58,4 +59,3 @@ Do not record:
 Add or preserve backlinks from related method pages when the relationship is obvious.
 
 Do not force backlinks just to create graph density.
-

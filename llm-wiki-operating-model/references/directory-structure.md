@@ -53,6 +53,16 @@ Typical directories:
 
 If the workspace already has numbered Chinese directories or other domain-specific folders, keep them as the knowledge layer.
 
+For workspaces that already use numbered Chinese directories, treat directories like these as first-class knowledge-layer roots:
+
+- `00知识库/`: broad concepts, domain knowledge, evergreen notes.
+- `01内容生产/`: topic management, research, drafts, published pieces, source material.
+- `02方法论沉淀/`: reusable SOPs, frameworks, templates, playbooks, and high-value POV compatibility pages.
+- `03数据统计/`: spreadsheets, data analysis, competitor research, reports.
+- `04业务运营/`: growth, monetization, operations, and business model analysis.
+- `05客户交付/`: client delivery, course material, product material.
+- `06每日IDEA/`: daily idea capture.
+
 ### `wiki/`
 
 The meta layer.
@@ -92,4 +102,3 @@ Create `wiki/log.md` with:
 - setup entry
 - schema decisions
 - future operation entries
-

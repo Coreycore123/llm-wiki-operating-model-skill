@@ -9,6 +9,8 @@ Use this skill when the user wants to run a persistent file-based knowledge base
 
 The goal is to treat Markdown files as a compounding wiki, not as temporary chat output.
 
+This skill also includes `methods/content-performance-prediction/` as the native content performance prediction layer. Use it when the user wants to score assembled content before publishing, lock blind predictions, compare predictions against published retro data, build anchor samples, calibrate buckets, or adapt the system for a new creator.
+
 ## Core model
 
 The workspace has three layers:
@@ -29,6 +31,8 @@ Load only the relevant reference file:
 - `references/high-value-pov.md`: when recording reusable judgments.
 - `references/commercial-analysis.md`: when analyzing growth, monetization, products, IP, courses, or client delivery.
 - `references/lint-workflow.md`: when linting or health-checking the wiki.
+- `references/workspace-conventions.md`: when adapting the operating model to a user's existing local wiki conventions.
+- `methods/content-performance-prediction/docs/quickstart.md`: when setting up content performance prediction, blind prediction, retro, bucket calibration, or user onboarding requirements.
 
 ## Default operating rules
 
@@ -37,8 +41,10 @@ Load only the relevant reference file:
 - Search `wiki/index.md` first when answering workspace questions.
 - Update `wiki/index.md` when important pages, frameworks, or synthesis documents are created.
 - Append to `wiki/log.md` after meaningful ingest, synthesis, schema, lint, or high-value POV operations.
+- Do not treat reconstructed or already-published samples as blind predictions. Published samples can calibrate buckets and anchors, but only predictions locked before publishing can enter the blind-prediction accuracy pool.
 - Separate source-backed claims from inference.
 - Prefer local Markdown links for source support.
+- Preserve existing workspace conventions when present, including numbered domain folders, Obsidian-style concept links, and existing high-value POV compatibility pages.
 - Ask before saving a reusable framework unless the user already requested persistence.
 
 ## Trigger phrases
@@ -53,6 +59,11 @@ Use this skill for requests like:
 - "Health-check my wiki"
 - "Find duplicated or stale knowledge pages"
 - "Turn this folder into an AI-maintained knowledge base"
+- "建立内容表现预测"
+- "做发布前盲评"
+- "锁定 prediction"
+- "校准 bucket / anchor / rubric"
+- "把这套内容预测系统复制给新用户"
 
 ## Output style
 
@@ -69,4 +80,3 @@ When answering a query, separate:
 - inference
 - reusable judgment
 - recommended next write-back, if any
-

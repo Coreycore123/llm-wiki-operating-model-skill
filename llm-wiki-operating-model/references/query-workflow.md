@@ -5,7 +5,7 @@ Use this when answering questions against a user's knowledge base.
 ## Steps
 
 1. Read `wiki/index.md` first.
-2. Search relevant directories with fast text search.
+2. Search relevant directories with fast text search such as `rg`.
 3. Read the most relevant pages before answering.
 4. Separate:
    - source-backed claims
@@ -49,4 +49,4 @@ Do not use this full template when the answer is simple. Keep the answer proport
 - If the wiki lacks evidence, say so.
 - Do not present a synthesis as source-backed unless the supporting page or raw source was read.
 - For new commercial recommendations, run the commercial analysis sequence.
-
+- Use Obsidian-style links only for concept navigation. Use ordinary Markdown links for precise evidence citations.

@@ -24,6 +24,13 @@ OpenClaw documents skills as directories containing at least `SKILL.md` under `~
 - Ingest workflow for articles, transcripts, notes, and source materials
 - Query workflow for answering from the local wiki
 - High-value POV workflow for reusable judgments
+- Content performance prediction method:
+  - pre-publish blind prediction
+  - prediction lock
+  - post-publish retro data
+  - bucket baseline
+  - anchor index
+  - rubric bump protocol
 - Commercial analysis standard:
   - product form
   - commercial intent
@@ -40,6 +47,12 @@ llm-wiki-operating-model-skill/
 │   ├── SKILL.md
 │   ├── agents/
 │   │   └── openai.yaml
+│   ├── methods/
+│   │   └── content-performance-prediction/
+│   │       ├── SKILL.md
+│   │       ├── docs/
+│   │       ├── templates/
+│   │       └── tools/
 │   └── references/
 │       ├── commercial-analysis.md
 │       ├── directory-structure.md
@@ -109,6 +122,43 @@ Use $llm-wiki-operating-model to answer this question from my knowledge base and
 ```text
 Use $llm-wiki-operating-model to health-check my wiki and suggest pages to merge, split, rename, or index.
 ```
+
+```text
+Use $llm-wiki-operating-model to set up content performance prediction for my publishing workflow.
+```
+
+```text
+Use $llm-wiki-operating-model to create a blind prediction before publishing this assembled draft.
+```
+
+## Content performance prediction
+
+The package includes a reusable method for predicting content performance before publication and calibrating those predictions with post-publish data.
+
+The default workflow is:
+
+```text
+assembled draft
+→ pre-publish blind prediction
+→ prediction lock
+→ publish
+→ T+1 / T+3 / T+7 retro
+→ bucket / anchor / rubric calibration
+```
+
+This is a calibration system, not a guarantee engine. Historical samples can initialize the rubric and bucket baseline, but only predictions locked before publication should be used to claim prediction accuracy.
+
+### What a new user must prepare
+
+Before copying this system to another creator or workspace, prepare:
+
+- Content assets: unpublished topics, assembled drafts, published originals, high-performing samples, low-performing samples, normal-performing samples, and cover / title / body text when relevant.
+- Post-publish retro data: platform, account, content form, publish timestamp, impressions, reads or plays, likes, comments, saves, shares, follower growth, leads or conversions, paid traffic status, abnormal factors, and ideally T+1 / T+3 / T+7 snapshots.
+- Platform and business intent: define whether performance means IP influence, consulting leads, course conversion, brand communication, or another outcome.
+- Personal calibration samples: 20-30 published samples are recommended before treating bucket baselines as usable; with fewer samples, use only low / normal / high coarse buckets.
+- Operating discipline: lock predictions before publishing, mark already-published or data-exposed samples as `reconstructed` or `contaminated_prediction`, and update rubric rules only after repeated directional error.
+
+Public skill packages should include protocols, templates, and validators. They should not include private platform performance records, unpublished content, account-level business data, user-specific anchor samples, or private rubrics calibrated from confidential data.
 
 ## Privacy boundary
 
